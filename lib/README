@@ -1,0 +1,53 @@
+# Hard Real-Time Motion Control Platform
+
+A hard real-time closed-loop motion control platform based on the Texas Instruments TM4C123GXL LaunchPad.
+
+## Hardware
+
+- TM4C123GXL LaunchPad
+- TM4C123GH6PM
+- DC motor
+- Quadrature encoder
+- Motor driver
+
+## Software
+
+- C
+- ARM Cortex-M4F
+- PlatformIO
+- libopencm3
+- ARM GCC
+
+## Project Goals
+
+- Bare-metal peripheral development
+- Deterministic periodic scheduling
+- PWM motor control
+- Quadrature encoder feedback
+- PID position control
+- Deadline monitoring
+- Execution-time measurement
+- Jitter measurement
+- Safety/fault handling
+
+## Architecture
+
+```text
+Encoder
+   │
+   ▼
+Feedback
+   │
+   ▼
+Control Scheduler
+   │
+   ▼
+PID Controller
+   │
+   ▼
+PWM
+   │
+   ▼
+Motor
+   │
+   └──────────► Encoder
